@@ -129,7 +129,7 @@ export default function PricingSection() {
 
                 {/* CTA */}
                 <a
-                  href={interestUrl}
+                  href="#contact"
                   style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
                     background: '#1E3A8A', color: 'white',
@@ -230,7 +230,7 @@ export default function PricingSection() {
 
               {/* CTA */}
               <a
-                href={eliteContactUrl}
+                href="#contact"
                 style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
                   background: 'rgba(55,138,221,0.12)',

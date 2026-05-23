@@ -4,10 +4,10 @@ import { Menu, X, ArrowRight } from 'lucide-react'
 import Logo from './Logo'
 
 const navLinks = [
-  { label: 'Produto', href: '#features' },
-  { label: 'Solucoes', href: '#ai' },
+  { label: 'Produto', href: '#ecosystem' },
+  { label: 'IA', href: '#ai' },
   { label: 'Precos', href: '#pricing' },
-  { label: 'Docs', href: '#contact' },
+  { label: 'Contato', href: '#contact' },
 ]
 
 export default function Navbar() {

@@ -17,7 +17,7 @@ export default function FlowSection() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section style={{ padding: '120px 24px', background: 'white', overflow: 'hidden' }}>
+    <section id="flow" style={{ padding: '120px 24px', background: 'white', overflow: 'hidden' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         <motion.div
           ref={ref}
