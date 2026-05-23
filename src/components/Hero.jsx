@@ -27,7 +27,9 @@ function DashboardMockup() {
   ]
 
   return (
-    <div style={{
+    <div
+      className="dashboard-shell"
+      style={{
       background: '#0D1526',
       border: '1px solid rgba(255,255,255,0.08)',
       borderRadius: '20px',
@@ -36,14 +38,18 @@ function DashboardMockup() {
       width: '100%',
       maxWidth: '780px',
       margin: '0 auto',
-    }}>
+      }}
+    >
       {/* Window chrome */}
-      <div style={{
+      <div
+        className="dashboard-window-bar"
+        style={{
         padding: '12px 18px',
         borderBottom: '1px solid rgba(255,255,255,0.06)',
         display: 'flex', alignItems: 'center', gap: '8px',
         background: 'rgba(0,0,0,0.25)',
-      }}>
+        }}
+      >
         <div style={{ display: 'flex', gap: '6px' }}>
           <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#E11D48', opacity: 0.8 }} />
           <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#F59E0B', opacity: 0.8 }} />
@@ -62,15 +68,18 @@ function DashboardMockup() {
       </div>
 
       {/* App layout — real FlowDesk structure */}
-      <div style={{ display: 'flex', height: '385px' }}>
+      <div className="dashboard-layout" style={{ display: 'flex', height: '385px' }}>
         {/* Sidebar */}
-        <div style={{
+        <div
+          className="dashboard-sidebar"
+          style={{
           width: '162px', flexShrink: 0,
           background: '#080F1C',
           borderRight: '1px solid rgba(255,255,255,0.04)',
           padding: '12px 8px',
           display: 'flex', flexDirection: 'column',
-        }}>
+          }}
+        >
           {/* Logo */}
           <div style={{ padding: '4px 8px 14px', borderBottom: '1px solid rgba(255,255,255,0.04)', marginBottom: '10px' }}>
             <div style={{ fontSize: '12px', fontWeight: 700, color: '#378ADD', fontFamily: 'Inter, sans-serif', letterSpacing: '-0.03em', lineHeight: 1 }}>FlowDesk ADV</div>
@@ -112,7 +121,10 @@ function DashboardMockup() {
         </div>
 
         {/* Main content */}
-        <div style={{ flex: 1, padding: '16px 20px', overflow: 'hidden', background: '#0D1526' }}>
+        <div
+          className="dashboard-main"
+          style={{ flex: 1, padding: '16px 20px', overflow: 'hidden', background: '#0D1526' }}
+        >
           {/* Greeting */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '13px' }}>
             <div>
@@ -141,7 +153,7 @@ function DashboardMockup() {
           </div>
 
           {/* Stat cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '7px', marginBottom: '13px' }}>
+          <div className="dashboard-stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '7px', marginBottom: '13px' }}>
             {indicators.map(({ label, value, color, bg, Icon }) => (
               <div key={label} style={{
                 background: bg,
@@ -165,7 +177,7 @@ function DashboardMockup() {
           </div>
 
           {/* Bottom panels */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+          <div className="dashboard-bottom-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
             {/* Task distribution */}
             <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '10px', padding: '10px 12px' }}>
               <div style={{ fontSize: '9px', fontWeight: 600, color: 'rgba(255,255,255,0.35)', fontFamily: 'Inter, sans-serif', marginBottom: '4px' }}>Distribuição de Tarefas</div>
@@ -228,8 +240,10 @@ function FloatingCard({ children, style, className, animateY, delay = 0 }) {
 export default function Hero() {
   return (
     <section
+      id="hero"
+      className="hero-section"
       style={{
-        minHeight: '100vh',
+        minHeight: '100svh',
         background: 'linear-gradient(180deg, #050A18 0%, #080F20 60%, #0A1428 100%)',
         position: 'relative',
         overflow: 'hidden',
@@ -346,7 +360,10 @@ export default function Hero() {
       </FloatingCard>
 
       {/* Content */}
-      <div style={{ position: 'relative', zIndex: 10, textAlign: 'center', maxWidth: '860px', margin: '0 auto', padding: '0 24px' }}>
+      <div
+        className="hero-content-wrap"
+        style={{ position: 'relative', zIndex: 10, textAlign: 'center', maxWidth: '860px', margin: '0 auto', padding: '0 24px' }}
+      >
 
         {/* Badge */}
         <motion.div {...fadeUp(0.1)} style={{ marginBottom: '28px' }}>
@@ -377,7 +394,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Headline */}
-        <motion.h1 {...fadeUp(0.2)} style={{
+        <motion.h1 className="hero-title" {...fadeUp(0.2)} style={{
           fontSize: 'clamp(38px, 7vw, 78px)',
           fontWeight: 800,
           lineHeight: 1.04,
@@ -399,7 +416,7 @@ export default function Hero() {
         </motion.h1>
 
         {/* Subheadline */}
-        <motion.p {...fadeUp(0.3)} style={{
+        <motion.p className="hero-subtitle" {...fadeUp(0.3)} style={{
           fontSize: 'clamp(15px, 2.2vw, 19px)',
           lineHeight: 1.7,
           color: 'rgba(255,255,255,0.45)',
@@ -414,9 +431,10 @@ export default function Hero() {
         </motion.p>
 
         {/* CTAs */}
-        <motion.div {...fadeUp(0.4)} style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '56px' }}>
+        <motion.div className="hero-cta-group" {...fadeUp(0.4)} style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '56px' }}>
           <a
             href="#pricing"
+            className="hero-primary-cta"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -448,6 +466,7 @@ export default function Hero() {
           </a>
           <a
             href="#features"
+            className="hero-secondary-cta"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -480,7 +499,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Validation proof */}
-        <motion.div {...fadeUp(0.5)} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <motion.div className="hero-proof" {...fadeUp(0.5)} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.2)', fontFamily: 'Inter, sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', fontWeight: 600 }}>
             Validado em escritórios jurídicos reais
           </span>
@@ -492,6 +511,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 60, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 1.1, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
+        className="hero-dashboard-wrap"
         style={{
           position: 'relative',
           zIndex: 10,
@@ -503,7 +523,7 @@ export default function Hero() {
       >
         <DashboardMockup />
         {/* Bottom fade to next section */}
-        <div style={{
+        <div className="hero-dashboard-fade" style={{
           position: 'absolute',
           bottom: 0,
           left: '24px',

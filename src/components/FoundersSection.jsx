@@ -62,12 +62,15 @@ function FounderCard({ founder, index, inView }) {
       }}
     >
       {/* Photo */}
-      <div style={{
-        height: '320px',
-        position: 'relative',
-        overflow: 'hidden',
-        background: `linear-gradient(160deg, rgba(${accentRgb},0.1) 0%, rgba(5,10,24,0.8) 100%)`,
-      }}>
+      <div
+        className="founder-photo"
+        style={{
+          height: '320px',
+          position: 'relative',
+          overflow: 'hidden',
+          background: `linear-gradient(160deg, rgba(${accentRgb},0.1) 0%, rgba(5,10,24,0.8) 100%)`,
+        }}
+      >
         <img
           ref={imgRef}
           src={photo}
@@ -116,7 +119,7 @@ function FounderCard({ founder, index, inView }) {
       </div>
 
       {/* Content */}
-      <div style={{ padding: '28px 32px 32px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <div className="founder-card-body" style={{ padding: '28px 32px 32px', flex: 1, display: 'flex', flexDirection: 'column' }}>
         <div style={{ marginBottom: '14px' }}>
           <h3 style={{
             fontSize: '22px', fontWeight: 800,
@@ -196,6 +199,7 @@ export default function FoundersSection() {
   return (
     <section
       id="founders"
+      className="landing-section landing-section-dark"
       style={{
         padding: '120px 24px',
         background: 'linear-gradient(180deg, #060C1E 0%, #080F22 100%)',
@@ -275,6 +279,7 @@ export default function FoundersSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+          className="founders-manifesto"
           style={{
             padding: '48px 56px',
             background: 'rgba(55,138,221,0.04)',

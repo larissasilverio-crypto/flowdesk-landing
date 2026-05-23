@@ -79,6 +79,7 @@ export default function AISection() {
   return (
     <section
       id="ai"
+      className="landing-section landing-section-dark"
       style={{
         padding: '120px 24px',
         background: 'linear-gradient(180deg, #070D1F 0%, #0B1530 50%, #060C1D 100%)',
@@ -160,6 +161,7 @@ export default function AISection() {
           {capabilities.map(({ icon: Icon, title, description, status, statusColor, statusBg }, i) => (
             <motion.div
               key={title}
+              className="ai-capability-card"
               initial={{ opacity: 0, y: 16 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}

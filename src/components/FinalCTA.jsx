@@ -7,7 +7,7 @@ export default function FinalCTA() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section style={{
+    <section className="landing-section landing-section-dark final-cta-section" style={{
       padding: '120px 24px',
       background: 'linear-gradient(180deg, #060C1D 0%, #0B1630 100%)',
       position: 'relative',
@@ -112,6 +112,7 @@ export default function FinalCTA() {
           </motion.h2>
 
           <motion.p
+            className="final-cta-copy"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.25 }}
@@ -130,6 +131,7 @@ export default function FinalCTA() {
           </motion.p>
 
           <motion.div
+            className="final-cta-actions"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.35 }}
@@ -197,6 +199,7 @@ export default function FinalCTA() {
           </motion.div>
 
           <motion.div
+            className="final-cta-note"
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.5 }}

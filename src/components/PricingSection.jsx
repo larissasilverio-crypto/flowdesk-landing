@@ -36,7 +36,7 @@ export default function PricingSection() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="pricing" style={{ padding: '120px 24px', background: '#F8FAFC' }}>
+    <section id="pricing" className="landing-section landing-section-light" style={{ padding: '120px 24px', background: '#F8FAFC' }}>
       <div style={{ maxWidth: '980px', margin: '0 auto' }}>
 
         {/* Header */}
@@ -89,7 +89,7 @@ export default function PricingSection() {
               borderRadius: '24px', overflow: 'hidden',
               boxShadow: '0 20px 64px rgba(30,58,138,0.09), 0 4px 16px rgba(0,0,0,0.03)',
             }}>
-              <div style={{ padding: '36px 36px 40px' }}>
+              <div className="pricing-card-body" style={{ padding: '36px 36px 40px' }}>
 
                 {/* Status badge */}
                 <div style={{
@@ -194,7 +194,7 @@ export default function PricingSection() {
           >
             <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: '200px', height: '100px', background: 'radial-gradient(ellipse, rgba(55,138,221,0.15) 0%, transparent 70%)', filter: 'blur(20px)', pointerEvents: 'none' }} />
 
-            <div style={{ padding: '36px 36px 40px', position: 'relative' }}>
+            <div className="pricing-card-body" style={{ padding: '36px 36px 40px', position: 'relative' }}>
 
               {/* Status badge */}
               <div style={{

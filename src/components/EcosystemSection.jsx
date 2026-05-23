@@ -80,6 +80,7 @@ function ProductCard({ product, index }) {
   return (
     <motion.div
       ref={ref}
+      className="product-card"
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, delay: index * 0.12, ease: [0.16, 1, 0.3, 1] }}
@@ -203,7 +204,7 @@ export default function EcosystemSection() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="ecosystem" style={{ padding: '120px 24px', background: 'white' }}>
+    <section id="ecosystem" className="landing-section" style={{ padding: '120px 24px', background: 'white' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         <motion.div
           ref={ref}

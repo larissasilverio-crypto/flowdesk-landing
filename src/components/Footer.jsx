@@ -8,11 +8,15 @@ const links = {
 
 export default function Footer() {
   return (
-    <footer style={{
+    <footer
+      id="contact"
+      className="footer-shell"
+      style={{
       background: '#050A17',
       borderTop: '1px solid rgba(255,255,255,0.05)',
       padding: '64px 24px 40px',
-    }}>
+      }}
+    >
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         <div style={{
           display: 'grid',
@@ -107,7 +111,7 @@ export default function Footer() {
           }}>
             © 2026 FlowDesk. Todos os direitos reservados.
           </span>
-          <div style={{ display: 'flex', gap: '8px' }}>
+          <div className="footer-badges" style={{ display: 'flex', gap: '8px' }}>
             {['ADV', 'Academy', 'Business'].map((product) => (
               <span
                 key={product}
