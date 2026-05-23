@@ -387,6 +387,11 @@
   .navbar-brand-desktop {
     margin-right: 18px;
   }
+
+  .hero-section {
+    padding-top: 178px !important;
+    padding-bottom: 96px !important;
+  }
 }
 
 @media (max-width: 1024px) {
