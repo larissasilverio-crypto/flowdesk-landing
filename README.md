@@ -1,16 +1,8 @@
-# React + Vite
+# Projeto removido
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositorio foi reduzido a uma aplicacao minima sem conteudo publico,
+assets promocionais, sitemap, arquivo de indexacao ou configuracao local de
+hospedagem.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+A tela restante existe apenas para evitar falha de build enquanto o projeto e
+desativado na plataforma de hospedagem.
